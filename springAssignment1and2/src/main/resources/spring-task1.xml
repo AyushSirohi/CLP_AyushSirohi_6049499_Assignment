@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="emp" class="cg.demo.task1.Employee">
+        <property name="employeeId" value="7777"/>
+        <property name="employeeName" value="AYUSH SIROHI"/>
+        <property name="salary" value="80000.0"/>
+        <property name="businessUnit" value="IT-BU"/>
+        <property name="age" value="20"/>
+    </bean>
+
+</beans>
