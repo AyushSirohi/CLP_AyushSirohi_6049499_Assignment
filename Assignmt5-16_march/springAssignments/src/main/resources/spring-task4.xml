@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="emp1" class="cg.demo.task4.Employee">
+        <property name="employeeId" value="100"/>
+        <property name="employeeName" value="Aryan"/>
+        <property name="salary" value="12345.67"/>
+    </bean>
+
+    <bean id="emp2" class="cg.demo.task4.Employee">
+        <property name="employeeId" value="101"/>
+        <property name="employeeName" value="Ayush"/>
+        <property name="salary" value="25000.00"/>
+    </bean>
+
+    <bean id="employeeDao" class="cg.demo.task4.EmployeeDao">
+        <property name="employeeList">
+            <list>
+                <ref bean="emp1"/>
+                <ref bean="emp2"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="employeeService" class="cg.demo.task4.EmployeeService">
+        <property name="employeeDao" ref="employeeDao"/>
+    </bean>
+
+</beans>
